@@ -4,22 +4,22 @@
 --두가지 풀이 존재
 
 --오답 :
-# SELECT ID, NAME, HOST_ID
-# from PLACES 
-# group by 3
-# having count(HOST_ID) >=2
-# order by 1
+ SELECT ID, NAME, HOST_ID
+ from PLACES 
+ group by 3
+ having count(HOST_ID) >=2
+ order by 1
 
 --이러면 중복 처리된 값이 나와서 원하는 결과 보여주기 어려움 결국 서브 쿼리 사용이 되어야 한다.
 
 --정답 1(서브쿼리 & in 절 활용) :
-# SELECT ID, NAME, HOST_ID
-# from PLACES 
-# WHERE HOST_ID IN (
-# SELECT HOST_ID
-# FROM PLACES
-# GROUP BY HOST_ID
-# HAVING COUNT(*) >=2)
+ SELECT ID, NAME, HOST_ID
+ from PLACES 
+ WHERE HOST_ID IN (
+ SELECT HOST_ID
+ FROM PLACES
+ GROUP BY HOST_ID
+ HAVING COUNT(*) >=2)
 # order by 1
 
 --서브 쿼리 안에 둘 이상 등록한 사람 조건에 되어 있고 바깥에 host_id 가 그 조건에 부합하면 결과 값 출력
