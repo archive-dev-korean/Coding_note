@@ -19,3 +19,14 @@ else:             # 홀수층이면 오→왼
 | ------ | --------------------------------------------------------- |
 | 층(row) | `(num - 1) // w`                                          |
 | 열(col) | `짝수층: (num - 1) % w`<br> `홀수층: (w - 1) - ((num - 1) % w)` |
+
+
+- (O(n log n) vs O(n²))
+    - 예시 : </br>
+  ` def solution(numbers):
+    numbers.sort()
+    return max(numbers[0] * numbers[1], numbers[-1] * numbers[-2])`
+    - 정렬 : 리스트를 오름차순으로 정렬
+    - 가능한 최대 곱:
+        - 가장 큰 두수의 곱: `numbers[-1] * numbers[-2]`
+        - 가장 작은 두 수의 곱 : `numbers[0] * numbers[1]` 
