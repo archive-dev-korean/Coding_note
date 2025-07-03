@@ -58,32 +58,6 @@ import numpy as np <- np 거의 고정
 | `np.max()` / `np.min()`       | 최대값 / 최소값                 |
 | `np.std()`                    | 표준편차 (standard deviation) |
 | `np.var()`                    | 분산 (variance)             |
-| `np.percentile(a, q)`         | 백분위수                      |
-| `np.argmax()` / `np.argmin()` | 최댓값/최솟값의 **인덱스** 반환       |
-
-
-# 파이썬 기본 문법중 헷갈렸던 것
-
-- for 문
-  - for i in range(start, end, step):
-    - start(출발점), step(방향, 증가폭), end 값은포함되지 않음
-    - step > 0 일떈, start < end 이어야 반복
-    - step < 0 일떈, start > end 이어야 반복
-  - 역순으로 하고 싶을 떄(리스트 len을 range로 받을 때):
-    - range(len(arr) -1, -1, -1) 이렇게 사용
-    - len(arr)-1 : 마지막 인덱스(출발점)
-    - -1 : 종료값(인덱스 0까지 가려면 -1까지)
-    - -1 : 한 번에 1씩 감소(역방향)
-
-
-| 문법                          | 용도                  | 예시                         |
-| --------------------------- | ------------------- | -------------------------- |
-| `for i in range(n)`         | **0부터 n-1까지 횟수 반복** | `for i in range(5)`        |
-| `for i in range(1, n)`      | **1부터 n-1까지 반복**    | `for i in range(1, 6)`     |
-| `for item in list`          | **리스트의 값들을 순회**     | `for x in [1,2,3]`         |
-| `for i in range(len(list))` | **인덱스로 접근하고 싶을 때**  | `for i in range(len(arr))` |
-
-
-
+| 임
 
 
