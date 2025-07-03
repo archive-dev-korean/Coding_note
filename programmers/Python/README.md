@@ -63,7 +63,7 @@ import numpy as np <- np 거의 고정
 - for 문;
   - i in 배열:
     - 배열의 값 참조
-  ` i in range(len(배열)):
+  - i in range(len(배열)):
     - 인덱스와 순서 값 모두 참조 가능
-  - 
+- 
 
