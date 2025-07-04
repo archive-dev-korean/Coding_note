@@ -90,6 +90,9 @@ import numpy as np <- np 거의 고정
       - map(lambda x: x**2, nums -> 이런식으로 활용
     - filter() : 함수 조건을 통과하는 원소만 걸러냄
       - filter(lambda x: x % 2 == 0, nums)
+  - sorted() + key : 리스트 등을 정렬할 때 사용하는 함수
+    - sorted(리스트, key=정렬기준함수, reverse=True/False)
+    - sorted(words, key=lambda x: len(x))
 
 
 
