@@ -94,5 +94,10 @@ import numpy as np <- np 거의 고정
     - sorted(리스트, key=정렬기준함수, reverse=True/False)
     - sorted(words, key=lambda x: len(x))
 
+# Python 내장 함수
+- min() : 최솟값
+- sum() : 합
+- max() : 최댓값
+- count() : 특정 값 몇번 등장하는지 반환 (리스트 전용 메서드)
 
 
