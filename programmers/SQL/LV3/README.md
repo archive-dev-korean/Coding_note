@@ -18,3 +18,7 @@
     - NTILE(N) OVER (ORDER BY 정렬기준)
 - 퍼센트 계산 : 값/전체합 * 100 으로 계산
   - 예시: `ROUND(SIZE * 100.0 / SUM(SIZE) OVER (), 1) AS PERCENT`
+
+
+- CTE(공통 테이블 식)
+  - with 테이블명 지정 as ( 그다음 표준 쿼리 식) 이렇게 씀
