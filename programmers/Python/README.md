@@ -65,6 +65,9 @@ import numpy as np <- np 거의 고정
     - 배열의 값 참조
   - i in range(len(배열)):
     - 인덱스와 순서 값 모두 참조 가능
+    - 대체 가능 함수 : enumerate
+      - for i in enumerate(배열) 이렇게 쓰면 for i in ragne(len(배열)) 대체 가능  
+  
 - 슬라이싱
 
 | 문법                  | 설명              |
@@ -74,6 +77,19 @@ import numpy as np <- np 거의 고정
 | `a[start:]`         | start부터 끝까지     |
 | `a[start:end:step]` | step 간격으로 추출    |
 | `a[::-1]`           | 역순으로 전체 추출      |
+
+- 리스트 컴프리헨션
+  - [표현식 for 변수 in 반복가능한객체 if 조건]
+    - [x**2 for x in range(10) if x % 2 == 0]
+- 람다식 : 이름 없는 간단한 함수를 한 줄로 정의하는 방법
+  - lambda 매개변수: 표현식
+    - add = lambda x, y: x + y
+    - print(add(3, 5))  # → 8  
+  - map() 과 filter()와 함께 사용됨
+    - map() : 모든 원소에 함수를 적용한 결과를 반환
+      - map(lambda x: x**2, nums -> 이런식으로 활용
+    - filter() : 함수 조건을 통과하는 원소만 걸러냄
+      - filter(lambda x: x % 2 == 0, nums)
 
 
 
