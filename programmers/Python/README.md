@@ -101,5 +101,7 @@ import numpy as np <- np 거의 고정
 - sum() : 합
 - max() : 최댓값
 - count() : 특정 값 몇번 등장하는지 반환 (리스트 전용 메서드)
-
+- map() : 반복 가능한 값들에 함수를 하나하나 적용해서 새로운 값으로 바꿔주는 도구 (보통 list()나 sum() 같은 걸로 감싸서 씀)
+  - map(함수, 반복가능한_자료) 
+  - list(map(int, str_nums)) (str_nums는 문자열 리스트)
 
