@@ -93,6 +93,7 @@ import numpy as np <- np 거의 고정
   - sorted() + key : 리스트 등을 정렬할 때 사용하는 함수
     - sorted(리스트, key=정렬기준함수, reverse=True/False)
     - sorted(words, key=lambda x: len(x))
+- 튜플 : 각 값에 대응하는 값을 리턴하고 싶을 때 간편하게 사용할 수 있음
 
 # Python 내장 함수
 - min() : 최솟값
