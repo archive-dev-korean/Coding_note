@@ -91,8 +91,9 @@ import numpy as np <- np 거의 고정
     - filter() : 함수 조건을 통과하는 원소만 걸러냄
       - filter(lambda x: x % 2 == 0, nums)
   - sorted() + key : 리스트 등을 정렬할 때 사용하는 함수
-    - sorted(리스트, key=정렬기준함수, reverse=True/False)
+    - sorted(리스트, key=정렬기준함수(생략가능), reverse=True/False(생략가능 생략하면 오름차순)) -> 내림차순 하고 싶을 땐 True
     - sorted(words, key=lambda x: len(x))
+    - list.sort() 이렇게 사용할 수도 있음 -> 오름차순 정렬
 - 튜플 : 각 값에 대응하는 값을 리턴하고 싶을 때 간편하게 사용할 수 있음
 
 # Python 내장 함수
