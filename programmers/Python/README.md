@@ -87,7 +87,7 @@ import numpy as np <- np 거의 고정
     - print(add(3, 5))  # → 8  
   - map() 과 filter()와 함께 사용됨
     - map() : 모든 원소에 함수를 적용한 결과를 반환
-      - map(lambda x: x**2, nums -> 이런식으로 활용
+      - map(lambda x: x**2, nums) -> 이런식으로 활용
     - filter() : 함수 조건을 통과하는 원소만 걸러냄
       - filter(lambda x: x % 2 == 0, nums)
   - sorted() + key : 리스트 등을 정렬할 때 사용하는 함수
