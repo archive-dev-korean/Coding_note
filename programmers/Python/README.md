@@ -115,6 +115,9 @@ import numpy as np <- np 거의 고정
 - isdigit() : 모든 문자가 숫자인지 확인
 - isalnum() : 모든 문자가 알파벳 또는 숫자인지 확인
 - isspace() : 모든 문자가 공백인지 확인
+- .index(value) : 리스트에서 해당 값이 처음 등장한 위치 반환
+- .rindex(value) : 뒤에서부터 찾음
+- 
 
 # 헷갈리는 사항
 - 문자열은 불변
