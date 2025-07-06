@@ -93,7 +93,32 @@ import numpy as np <- np 거의 고정
       - filter(lambda x: x % 2 == 0, nums)
   - sorted() + key : 리스트 등을 정렬할 때 사용하는 함수
     - sorted(리스트, key=정렬기준함수(생략가능), reverse=True/False(생략가능 생략하면 오름차순)) -> 내림차순 하고 싶을 땐 True
-    - sorted(words, key=lambda능
+    - sorted(words, key=lambda x: len(x))
+    - list.sort() 이렇게 사용할 수도 있음 -> 오름차순 정렬
+- 튜플 : 각 값에 대응하는 값을 리턴하고 싶을 때 간편하게 사용할 수 있음
+
+# Python 내장 함수
+- min() : 최솟값
+- sum() : 합
+- max() : 최댓값
+- count() : 특정 값 몇번 등장하는지 반환 (리스트 전용 메서드)
+- map() : 반복 가능한 값들에 함수를 하나하나 적용해서 새로운 값으로 바꿔주는 도구 (보통 list()나 sum() 같은 걸로 감싸서 씀)
+  - map(함수, 반복가능한_자료) 
+  - list(map(int, str_nums)) (str_nums는 문자열 리스트)
+- upper() : 모두 대문자로 변환
+- lower() : 모두 소문자로 변환
+- capitalize() : 맨 앞 글자만 대문자, 나머지는 소문자
+- title() : 단어마다 맨 앞 글자 대문자
+- swapcase() : 대소문자 서로 변환
+- isupper() : 대문자인지 판별
+- islower() : 소문자인지 판별
+- isalpha() : 모든 문자가 알파벳인지 확인
+- isdigit() : 모든 문자가 숫자인지 확인
+- isalnum() : 모든 문자가 알파벳 또는 숫자인지 확인
+- isspace() : 모든 문자가 공백인지 확인
+- .index(value) : 리스트에서 해당 값이 처음 등장한 위치 반환
+- .rindex(value) : 뒤에서부터 찾음
+- ''.join(리스트) : 리스트 값을 문자열로 합칠 때 사용 '','-','/' 등 사용 가능
 
 # 헷갈리는 사항
 - 문자열은 불변
