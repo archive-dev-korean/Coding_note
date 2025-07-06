@@ -7,6 +7,7 @@
 - case -> select 절에서 사용 가능
 - datediff 사용법 -> datediff(컬럼명1, 컬럼명2) = 컬럼명1 - 컬럼명2 (mysql 전용) -> 일 추출됨
     - 시간까지 추출하고 싶으면 TIMESTAMPDIFF 쓰면 시간까지 추출됨
+      - TIMESTAMPDIFF(DAY, 컬럼1, 컬럼2) 이렇게 써도 일 추출할 수 있음
   - oracle에서 같은 기능 사용하고 싶으면 date1 - date2 하면 됨 (하지만 mysql에서도 사용 가능함)
 - 문자열을 날짜 형식으로 바꿀 때
   - To_date : orcle 전용 TO_DATE('1234-08-22' ,'YYYY-mm-dd')이렇게 씀
