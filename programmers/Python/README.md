@@ -104,4 +104,14 @@ import numpy as np <- np 거의 고정
 - map() : 반복 가능한 값들에 함수를 하나하나 적용해서 새로운 값으로 바꿔주는 도구 (보통 list()나 sum() 같은 걸로 감싸서 씀)
   - map(함수, 반복가능한_자료) 
   - list(map(int, str_nums)) (str_nums는 문자열 리스트)
-
+- upper() : 모두 대문자로 변환
+- lower() : 모두 소문자로 변환
+- capitalize() : 맨 앞 글자만 대문자, 나머지는 소문자
+- title() : 단어마다 맨 앞 글자 대문자
+- swapcase() : 대소문자 서로 변환
+- isupper() : 대문자인지 판별
+- islower() : 소문자인지 판별
+- isalpha() : 모든 문자가 알파벳인지 확인
+- isdigit() : 모든 문자가 숫자인지 확인
+- isalnum() : 모든 문자가 알파벳 또는 숫자인지 확인
+- isspace() : 모든 문자가 공백인지 확인
