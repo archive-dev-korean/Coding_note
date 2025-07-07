@@ -1,3 +1,5 @@
+--oracle 로 풀고 싶었는데 언어가 지원하지 않아서 mysql로 품
+
 --문제 : 3세대의 대장균의 ID(ID) 를 출력하는 SQL 문을 작성해주세요. 이때 결과는 대장균의 ID 에 대해 오름차순 정렬해주세요.
 --출처 : https://school.programmers.co.kr/learn/courses/30/lessons/301650
 
