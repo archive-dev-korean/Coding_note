@@ -7,6 +7,7 @@ def solution(n):
         n = n//10
     return answer
 # 이게 정석적으로 python 스럽지 않게 푼 것 같다.
+# while > 0 써서 나눠지지 않을 떄까지 계속 반복하면 된다.
 
 # 이거는 뭐 따로 간단하게 풀 방법이 크게 없는 것 같다.
 
