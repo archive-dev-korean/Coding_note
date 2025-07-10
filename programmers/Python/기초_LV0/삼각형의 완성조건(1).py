@@ -28,3 +28,9 @@ def solution(sides):
         return 2
 
   # 이 방법을 썻다 max는 내장함수라 import없이 써도 된다.
+
+# 위에 코드도 괜찮지만 진짜 python 스럽게 풀려면
+def solution(sides):
+    return 1 if max(sides) < (sum(sides) - max(sides)) else 2
+
+# 이렇게 쓰면 된다.
