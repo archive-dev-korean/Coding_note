@@ -10,7 +10,9 @@
 - rotate(n) : n칸 오른쪽(+) 또는 왼쪾으로(-)으로 회전
 
  # deque #
-**매우 중요**
+**매우 중요**</br>
+리스트의 단점 (pop/insert 할 떄 느림) 보완한 구조</br>
+양쪽에서 삽입/삭제가 모두 O(1) 시간 복잡도로 가능
 - deque: 양쪽 삽입/삭제가 빠른 리스트형 자료구조
 - collections 모듈에서 import해서 사용해야 함.(from collections import deque)
     - dq = deque(list) 이렇게 -> 리스트를 deque로 변환
@@ -18,7 +20,11 @@
     - pop() : 오른쪽 끝 요소 제거 후 반환
     - popleft() : 왼쪽 첫 요소 제거 후 반환
     - append(x) : 오른쪽 끝에 x 추가
-    - appendleft(x) : 왼쪽 맨 앞에 x 추
+    - appendleft(x) : 왼쪽 맨 앞에 x 추가
+    - extend(iterable) : 오른쪽에 여러 값 추가
+    - extendleft(iterable) : 왼쪽에 여러 값 추가(역순으로 들어감)
+    - rotate(n) : n칸 회전
+    - reverse() : deque 뒤집기
         
 ***2차원 배열에서 층과 열 구하기***
 - 번호(num)주어 졌을 떄:</br>
