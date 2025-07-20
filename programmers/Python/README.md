@@ -109,6 +109,9 @@ import numpy as np <- np 거의 고정
 
 # Python 내장 함수
 - min() : 최솟값
+  - key 값사용 가능
+    - key 인자를 사용하면 "비교 기준"을 바꿔서 작다고 판단할 대상을 정할 수 있습니다.
+    - min(nums, key=abs) 이렇게 절댓값 기준 작은 값을 반환
 - sum() : 합
 - max() : 최댓값
 - count() : 특정 값 몇번 등장하는지 반환
