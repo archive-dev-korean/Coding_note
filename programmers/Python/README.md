@@ -82,6 +82,10 @@ import numpy as np <- np 거의 고정
   - [표현식 for 변수 in 반복가능한객체 if 조건]
     - [x**2 for x in range(10) if x % 2 == 0]
     - 만약 표현식에 두개의 인자를 받고 싶으면 ()나 []로 감싸줘야 함. 아니면 에러남 만약 근데 만약 이렇게 리턴하면 리스트안에 튜플, 리스트로 반환 되기 떄문에 값을 두개 반환 하고 싶으면 다르게 표현을 해야함 따로 변수를 지정한다든지
+- 딕셔너리 컴프리헨션
+  - {key: value for 변수 in 반복가능한객체}
+  - {x: x**2 for x in range(1, 6) if x % 2 == 0}
+  - d = {char: idx for idx, char in enumerate(s)}
 - 람다식 : 이름 없는 간단한 함수를 한 줄로 정의하는 방법
   - lambda 매개변수: 표현식
     - add = lambda x, y: x + y
@@ -96,6 +100,12 @@ import numpy as np <- np 거의 고정
     - sorted(words, key=lambda x: len(x))
     - list.sort() 이렇게 사용할 수도 있음 -> 오름차순 정렬
 - 튜플 : 각 값에 대응하는 값을 리턴하고 싶을 때 간편하게 사용할 수 있음
+- 딕셔너리 : Key:Value (키:값) 쌍으로 데이터를 저장하는 자료형
+  - d = {}
+  - d['a'] = 1
+  - d['b'] = 2
+  - 이렇게 쓰거나
+  - d = dict(a=1, b=2) 이렇게 써도 됨
 
 # Python 내장 함수
 - min() : 최솟값
