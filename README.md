@@ -25,7 +25,7 @@ Coding_note/
 │   │   ├── Lv3/
 │   │   ├── Lv4/
 │   └── Python/
-│       ├── Lv0_기초/
+│       ├── 기초_Lv0/
 │       ├── Lv1/
 │       └── Lv2/
 ├── LeetCode/
