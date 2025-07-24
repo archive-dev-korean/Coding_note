@@ -106,7 +106,9 @@ import numpy as np <- np 거의 고정
   - d['b'] = 2
   - 이렇게 쓰거나
   - d = dict(a=1, b=2) 이렇게 써도 됨
-
+  - .items() : 딕셔너리의 모든(키,값) 쌍을 튜플 형태로 반환하는 메서드 (key,value) 형태로 반환됨
+    - for i,j in dict.items(): 쓰면 i가 키값, j가 value값 순회함 
+  - .keys(), .values()도 사용 가능 이거는 키값만 따로 value값만 따로 순회하고 싶을 떄 사용.
 # Python 내장 함수
 - min() : 최솟값
   - key 값사용 가능
