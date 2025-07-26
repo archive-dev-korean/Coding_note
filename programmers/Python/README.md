@@ -25,7 +25,7 @@ import math -> 연산할 떄 사용가능
 | `math.isnan(x)`       | NaN(Not a Number) 여부               |
 | `math.copysign(x, y)` | x의 절댓값에 y의 부호를 붙인 값                |
 | `math.hypot(x, y)`    | √(x² + y²) — 피타고라스 거리              |
-
+- 콤비네이션도 math.comb(a,b) 이렇게 구할 수 있다.
 
 import statistics
 
