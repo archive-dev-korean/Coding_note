@@ -1,0 +1,57 @@
+-- 문제 : MEMBER_PROFILE와 REST_REVIEW 테이블에서 리뷰를 가장 많이 작성한 회원의 리뷰들을 조회하는 SQL문을 작성해주세요. 회원 이름, 리뷰 텍스트, 리뷰 작성일이 출력되도록 작성해주시고, 결과는 리뷰 작성일을 기준으로 오름차순, 리뷰 작성일이 같다면 리뷰 텍스트를 기준으로 오름차순 정렬해주세요.
+-- 출처 : https://school.programmers.co.kr/learn/courses/30/lessons/131124
+
+-- 정답 (서브쿼리 활용) : 
+SELECT m.MEMBER_NAME, r.REVIEW_TEXT, date_format(r.REVIEW_DATE, '%Y-%m-%d') as REVIEW_DATE
+from MEMBER_PROFILE m join  REST_REVIEW r on m.MEMBER_ID = r.MEMBER_ID
+WHERE M.MEMBER_NAME =
+(SELECT m.MEMBER_NAME
+FROM MEMBER_PROFILE m
+JOIN REST_REVIEW r ON m.MEMBER_ID = r.MEMBER_ID
+GROUP BY m.MEMBER_NAME
+ORDER BY COUNT(*) DESC
+LIMIT 1)
+order by 3, 2
+
+-- 음 그런데 이러면 join을 두번 쓴거라
+
+-- 조금더 다듬으면
+SELECT m.MEMBER_NAME, r.REVIEW_TEXT, DATE_FORMAT(r.REVIEW_DATE, '%Y-%m-%d') AS REVIEW_DATE
+FROM MEMBER_PROFILE m
+JOIN REST_REVIEW r ON m.MEMBER_ID = r.MEMBER_ID
+GROUP BY m.MEMBER_NAME, r.REVIEW_ID
+HAVING COUNT(*) = (
+    SELECT MAX(review_count)
+    FROM (
+        SELECT m2.MEMBER_NAME, COUNT(*) AS review_count
+        FROM MEMBER_PROFILE m2
+        JOIN REST_REVIEW r2 ON m2.MEMBER_ID = r2.MEMBER_ID
+        GROUP BY m2.MEMBER_NAME
+    ) AS sub
+)
+ORDER BY REVIEW_DATE, r.REVIEW_TEXT;
+
+
+-- 이렇게 쓸 수도 있고
+
+-- with 써서 푸는 방법도 있다.
+
+WITH REVIEW_COUNTS AS (
+  SELECT m.MEMBER_NAME, COUNT(*) AS REVIEW_COUNT
+  FROM MEMBER_PROFILE m
+  JOIN REST_REVIEW r ON m.MEMBER_ID = r.MEMBER_ID
+  GROUP BY m.MEMBER_NAME
+),
+MAX_REVIEWERS AS (
+  SELECT MEMBER_NAME
+  FROM REVIEW_COUNTS
+  WHERE REVIEW_COUNT = (SELECT MAX(REVIEW_COUNT) FROM REVIEW_COUNTS)
+)
+SELECT m.MEMBER_NAME, r.REVIEW_TEXT, DATE_FORMAT(r.REVIEW_DATE, '%Y-%m-%d') AS REVIEW_DATE
+FROM MEMBER_PROFILE m
+JOIN REST_REVIEW r ON m.MEMBER_ID = r.MEMBER_ID
+WHERE m.MEMBER_NAME IN (SELECT MEMBER_NAME FROM MAX_REVIEWERS)
+ORDER BY REVIEW_DATE, r.REVIEW_TEXT;
+
+
+-- 음 cte도 익술해 지는게 좋아서 아래걸 연습도 해야겠다 그러나 지금은 어떤걸 사용해도 성능은 비슷해 보이긴 한다
