@@ -29,4 +29,5 @@ Coding_note/
 │       ├── Lv1/
 │       └── Lv2/
 ├── LeetCode/
+├── .gitattributes
 └── README.md
