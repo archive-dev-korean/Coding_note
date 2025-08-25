@@ -29,6 +29,6 @@ Coding_note/
 │       ├── Lv1/
 │       └── Lv2/
 ├── LeetCode/
-├── 알고리즘 학습
+├── 알고리즘 학습/
 ├── .gitattributes
 └── README.md
