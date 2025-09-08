@@ -24,3 +24,24 @@ from USED_GOODS_BOARD b, USED_GOODS_REPLY r
 where b.BOARD_ID = r.BOARD_ID and b.CREATED_DATE between '2022-10-01' and '2022-10-31'
 order by r.CREATED_DATE asc, b.TITLE asc
 -- between 조건으로 변경하면 정답처리 
+
+
+-- 조금더 명확하게 하자면
+SELECT 
+     b.TITLE,
+     b.BOARD_ID,
+     r.REPLY_ID,
+     r.WRITER_ID,
+     r.CONTENTS,
+     DATE_FORMAT(b.CREATED_DATE, '%Y-%m-%d') AS CREATED_DATE
+ FROM 
+     USED_GOODS_BOARD b
+ JOIN 
+     USED_GOODS_REPLY r
+ ON 
+     b.CREATED_DATE = r.CREATED_DATE
+WHERE b.CREATED_DATE BETWEEN '2022-10-01' AND '2022-10-31'
+ORDER BY 
+     b.CREATED_DATE, b.TITLE ASC
+-- 이렇게 적는게 나음(가독성)
+
