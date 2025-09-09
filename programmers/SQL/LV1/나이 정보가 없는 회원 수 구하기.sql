@@ -5,3 +5,10 @@
 SELECT count(*) as USERS
 from USER_INFO 
 where isnull(age)
+
+
+select count(*) as users
+from user_info
+where age is null
+
+-- 근데 아래로 쓰는게 더 좋음
