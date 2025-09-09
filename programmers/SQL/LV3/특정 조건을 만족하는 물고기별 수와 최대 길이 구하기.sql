@@ -11,7 +11,8 @@ group by 3
 having avg(LENGTH) >= 33
 order by 3
 
---where 절에서 null 처리가 들어가서 결과는 똑같이 나올 것이라고 생각함 하지만 틀린 경우도 있기에
+--where 절에서 null 처리가 들어가서 결과는 똑같이 나올 것이라고 생각함 하지만 틀린 경우도 있기에 
+--where 절에는 조건이 들어가야 해서 틀림 ifnulll은 조건이 아님
 
 select count(*) as FISH_COUNT,
 max(LENGTH) as MAX_LENGTH,
