@@ -4,3 +4,8 @@
 SELECT ANIMAL_ID
 from ANIMAL_INS 
 where isnull(NAME)
+
+-- #이렇게 쓰는게 더 효과적
+select animal_id
+from animal_ins
+where name is null
