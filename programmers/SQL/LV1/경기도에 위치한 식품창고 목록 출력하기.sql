@@ -12,3 +12,12 @@ from FOOD_WAREHOUSE
 where ADDRESS like '%경기도%' and ifnull(FREEZER_YN, 'N') 
 order by WAREHOUSE_ID asc
 --> 이러면 FREEZER_YN값이 'Y'인 값만 출력됨.
+
+
+-- ifnull 써도 되지만
+select warehouse_id, warehouse_name, address, coalesce(freezer_yn, 'N') as freezer_yn
+from food_warehouse
+where address like '경기도%'
+order by warehouse_id 
+
+-- 이렇게 coalesce쓰는게 더 범용성 높음
