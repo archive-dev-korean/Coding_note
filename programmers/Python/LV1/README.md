@@ -8,7 +8,8 @@
  
 **rotate**
 - rotate(n) : n칸 오른쪽(+) 또는 왼쪾으로(-)으로 회전
-
+# stack #
+FILO(First In Last Out)구조 따로 구현 하는 방법은 없고 리스트를 활용하여 구현
  # deque #
 **매우 중요**</br>
 리스트의 단점 (pop/insert 할 떄 느림) 보완한 구조</br>
