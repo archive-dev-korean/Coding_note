@@ -16,7 +16,7 @@ def bfs():
     dq = deque()
     # dq.append((0,0)) #원래 이렇게 나옴 (좌표값만 표시되어 있음)
     dq.append((0,0,1)) # 몇칸을 지나왔는지 알기 위해 마지막에 0추가 해줌 count용도 -> 그러나 처음부터 세는 걸로 문제에 나왔기 때문에 1로 시작함
-    while dq:
+    while dq: #dq 안에 값이 있으면 True, 비어 있으면 False 즉 큐에 데이터 남아 있는 동안 계속 처리해라 느낌
         y,x,d = dq.popleft()
         if y == N-1 and x == M-1: #우 하단에 도착했을 때(끝날 때)
             return d
