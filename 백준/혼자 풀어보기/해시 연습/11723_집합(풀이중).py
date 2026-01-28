@@ -20,3 +20,6 @@ for _ in range(M):
     # if c=='all':
     s.append(c)
     print(s)
+
+    # 결론 -> set() 으로 푸는 문제임
+    
