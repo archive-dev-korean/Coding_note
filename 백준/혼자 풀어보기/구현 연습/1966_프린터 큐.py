@@ -37,6 +37,7 @@ for _ in range(T):
 #     P= list(map(int,input().split()))
 
     # q=[]
+    # 최대 힙 만들기
     max_heap=[]
 
     for i in range(N):
