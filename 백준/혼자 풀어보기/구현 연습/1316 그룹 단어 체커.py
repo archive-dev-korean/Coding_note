@@ -17,7 +17,7 @@ for j in l:
             # cnt+=1
         else:
             if j[k] != j[k-1]:
-                group = False
+                group = False # 연속하지 않은 문자가 왔을 때, 판단하기 위해 False도 둠(체크용)
                 break
     if group: #group 이 True이면
         cnt+=1
