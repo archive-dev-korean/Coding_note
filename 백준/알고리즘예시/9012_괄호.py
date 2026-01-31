@@ -10,7 +10,7 @@ for _ in range(T):
             # if len(stk)>0:
             if stk: #위에 비어 있는지 안 비어 있는지 아는 거랑 같은 결과 나옴
                 stk.pop()
-            else:
+            else: #처음부터 ) 가 나온 경우
                 isVPS= False
                 # print('NO')
                 break
