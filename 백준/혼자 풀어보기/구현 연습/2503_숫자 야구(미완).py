@@ -10,4 +10,5 @@ print(oracle2)
 for _ in range(N):
     n,s,b=map(int,input().split())
     temp=[]
-    
+
+# 부르트 포스로 푸는거 맞음 나중에 공부하고 다시 풀어보기
