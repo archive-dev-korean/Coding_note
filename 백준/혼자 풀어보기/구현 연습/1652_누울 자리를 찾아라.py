@@ -22,9 +22,9 @@ for _ in range(N):
 # 이렇게 짜면 ....는 3개로 계산함 연속한 수 계산함
 
 # 가로 검사
-for row in range(N):
+for row in range(N): # 행(가로줄)
     run=0
-    for col in range(N):
+    for col in range(N): #열(세로줄)
         if a[row][col] =='.':
             run+=1
         else:
