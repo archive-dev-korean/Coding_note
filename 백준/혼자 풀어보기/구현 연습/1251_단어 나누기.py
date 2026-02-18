@@ -11,6 +11,6 @@ for i in range(1,len(w)-1):
         first=w[:i]
         second=w[i:j]
         third=w[j:]
-    cand.append(first[::-1]+second[::-1]+third[::-1])
+        cand.append(first[::-1]+second[::-1]+third[::-1])
 print(min(cand))
 # 슬라이싱[포함:미포함] [a:b] -> a이상 b미만
