@@ -4,4 +4,4 @@ def solve(a:list):
     for i in a:
         answer+=i
     return answer
-print(solve([1,2,3,4,5]))
+# print(solve([1,2,3,4,5]))
