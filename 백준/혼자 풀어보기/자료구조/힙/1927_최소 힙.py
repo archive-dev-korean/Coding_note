@@ -1,5 +1,6 @@
 # 자료구조 연습
 import heapq as hq
+import sys 
 pq=[]
 N=int(input())
 for _ in range(N):
