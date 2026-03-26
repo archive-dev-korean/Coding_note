@@ -39,7 +39,7 @@ def bfs(start,target):
         
         for nxt in (now - 1, now + 1, now * 2): #nxt가 (now-1, now+1, now*2)를 하나씩 순서대로 가져온다
             if 0<= nxt <= 100000 and visited[nxt] == -1: #여기서 한 번만 방문하게 함
-                visited[nxt] = visited[now] + 1
+                visited[nxt] = visited[now] + 1 #이동한 시간?
                 d.append(nxt)
 print(bfs(N,K))
 
