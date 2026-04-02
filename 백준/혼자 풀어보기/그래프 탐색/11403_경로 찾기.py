@@ -14,23 +14,41 @@ visited=[[0] * N for _ in range(N)] #방문 기록 겸 결과 출력 리스트 /
 #             dfs(nxt)
 #             if visited[nxt] == 1:
 
-def dfs(start, now): #이렇게 구성하고(AI)
-    # start = 처음 출발한 노드
-    # now = 현재 서있는 노드
-    for nxt in range(N):
-        if adj[now][nxt] == 1 and visited[start][nxt] ==0:
-            visited[start][nxt]=1
-            dfs(start,nxt)
+# def dfs(start, now): #이렇게 구성하고(AI)
+#     # start = 처음 출발한 노드
+#     # now = 현재 서있는 노드
+#     for nxt in range(N):
+#         if adj[now][nxt] == 1 and visited[start][nxt] ==0:
+#             visited[start][nxt]=1
+#             dfs(start,nxt)
 
-# 이 부분도 좀 틀린 것 같은데
-# for x in range(len(adj)):
-#     for y in range(len(adj)):
-#         dfs(x,y) #이렇게 실행하고
+# # 이 부분도 좀 틀린 것 같은데
+# # for x in range(len(adj)):
+# #     for y in range(len(adj)):
+# #         dfs(x,y) #이렇게 실행하고
 
-# 이렇게 구성?(AI)
-for i in range(N): #각 노드에서 출발해 경우를 한 번씩 다 보는 것
-    dfs(i,i) #dfs(0,0) 이면 0에서 출발해서 지금 0에 있는 상태
-for k in visited:
-    print(*k)#결과를 출력하면 될 것 같은데??
+# # 이렇게 구성?(AI)
+# for i in range(N): #각 노드에서 출발해 경우를 한 번씩 다 보는 것
+#     dfs(i,i) #dfs(0,0) 이면 0에서 출발해서 지금 0에 있는 상태
+# for k in visited:
+#     print(*k)#결과를 출력하면 될 것 같은데??
 
 # 결국에 좌표 탐색이 아니라 i에서 출발해서 어디까지 갈 수 있는지를 찾는 문제라서 도착점(j)를 미리 정해놓고 dfs하면 안됨
+
+
+# BFS 도전
+from collections import deque
+def bfs(start, now):
+    d=deque()
+    d.append(start)
+    while d:
+        d.popleft()
+        for nxt in range(N):
+            if adj[now][nxt] == 1 and visited[start][nxt] ==0:
+                visited[start][nxt]=1
+                bfs(start,nxt)
+
+for i in range(N): #각 노드에서 출발해 경우를 한 번씩 다 보는 것
+    bfs(i,i) #dfs(0,0) 이면 0에서 출발해서 지금 0에 있는 상태
+for k in visited:
+    print(*k)#결과를 출력하면 될 것 같은데??
