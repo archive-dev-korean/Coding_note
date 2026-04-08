@@ -5,7 +5,7 @@ adj=[[0] * (N+1) for _ in range(N+1)]
 for _ in range(M):
     A,B=map(int,input().split())
     adj[A][B]=1
-# visited=[[0] * (N+1) for _ in range(N+1)]# 방문 체크
+# visited=[[0] * (N+1) for _ in range(N+1)]# 방문 체크 -> 이거는 모든 시작점 기준 BFS 할 때나 쓰는 구조
 visited=[-1] * (N+1)# 거리 배열(visited 역할)
 # visited=[]
 # adj[X][]=1
@@ -22,7 +22,7 @@ def bfs(start):
                 d.append(nxt)
     # return now
 bfs(X)
-# found=False
+found=False
 for i in range(1,N+1):
     if visited[i] == K:
     # bfs(i)
@@ -31,3 +31,5 @@ for i in range(1,N+1):
     # else:
 if not found:
     print(-1)
+
+# 결국 인접 행렬로 풀어서 에러나는 것임(원인)
